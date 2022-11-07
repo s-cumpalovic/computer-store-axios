@@ -18,7 +18,7 @@ class CustomerService {
   }
 
   getAll() {
-    axios.get("https://api.imgflip.com/get_memes").then((data) => {
+    axios.get("http://jsonplaceholder.typicode.com/posts").then((data) => {
       console.log(data);
     })
     .catch((error) => {
