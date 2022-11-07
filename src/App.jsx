@@ -3,16 +3,13 @@ import UserComponent from "./components/UserComponent";
 export const UserContext = React.createContext(null);
 
 function App() {
+  console.log(UserContext);
+  const data = { name: "Zdravo", surname: "Colic" };
   return (
     <div className="App">
-      <UserContext.Provider 
-      value={{
-        name: "Zdravo",
-        surname: "Colic"
-      }}
-      >
+      <UserContext.Provider value={data}>
         <UserComponent />
-        </UserContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
