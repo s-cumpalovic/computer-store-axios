@@ -1,3 +1,5 @@
+import axios from "axios";
+
 class CustomerService {
   constructor() {
     this.nextId = 3;
@@ -16,6 +18,12 @@ class CustomerService {
   }
 
   getAll() {
+    axios.get("https://api.imgflip.com/get_memes").then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
     return this.customers;
   }
 
